@@ -1,0 +1,5 @@
+C:\Users\nkhan\Documents\Zahid\Dot Net\Watermark-Project\Storage\obj\Debug\net5.0\Storage.csprojAssemblyReference.cache
+C:\Users\nkhan\Documents\Zahid\Dot Net\Watermark-Project\Storage\obj\Debug\net5.0\Storage.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nkhan\Documents\Zahid\Dot Net\Watermark-Project\Storage\obj\Debug\net5.0\Storage.AssemblyInfoInputs.cache
+C:\Users\nkhan\Documents\Zahid\Dot Net\Watermark-Project\Storage\obj\Debug\net5.0\Storage.AssemblyInfo.cs
+C:\Users\nkhan\Documents\Zahid\Dot Net\Watermark-Project\Storage\obj\Debug\net5.0\Storage.csproj.CoreCompileInputs.cache
