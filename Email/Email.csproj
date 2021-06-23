@@ -6,4 +6,7 @@
 <ItemGroup>
 <PackageReference Include="MailKit" Version="2.4.1" />
 </ItemGroup>
+<ItemGroup>
+<ProjectReference Include="../Utils/Utils.csproj" />
+</ItemGroup>
 </Project>
