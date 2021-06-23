@@ -82,6 +82,26 @@ namespace Storage
 
         public async Task DeleteAsync(string containerid, string fileId, string fileExtension, CancellationToken token = default)
         {
+            if(fileExtension == null)
+            {
+                throw new ArgumentNullException(nameof(fileExtension));
+            }
+
+            CloudBlobContainer container = _client.GetContainerReference(containerid.ToString());
+
+            if(!await container.ExistsAsync(token).ConfigureAwait(false))
+            {
+                throw new Exception($"Not Found - Container with ID# {containerid}");
+            }
+
+            CloudBlockBlob blockBlob = container.GetBlockBlobReference(string.Concat(fileId.ToString(),period,fileExtension));
+
+            if(!await blockBlob.ExistsAsync(token).ConfigureAwait(false))
+            {
+                throw new Exception($"Not Found - BLob with ID# {fileId} in Container# {containerid}");
+            }
+
+            await blockBlob.DeleteIfExistsAsync(token).ConfigureAwait(false);
         }
     }
 }

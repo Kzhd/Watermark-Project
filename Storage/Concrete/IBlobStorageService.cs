@@ -9,6 +9,6 @@ public interface IBlobStorageService
 {
     Task UploadAsync(string containerid, Stream fileStream, string fileId, string fileExtension,
                     int blobAccessExpirationDays, CancellationToken token);
-    Task DownloadAsync(string containerid, string fileId, string fileExtension, CancellationToken token);
+    Task<Stream> DownloadAsync(string containerid, string fileId, string fileExtension, CancellationToken token);
     Task DeleteAsync(string containerid, string fileId, string fileExtension, CancellationToken token);
 }
